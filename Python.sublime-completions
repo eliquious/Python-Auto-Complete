@@ -3,39 +3,42 @@
 
     "completions":
     [
-        "python", "True", "False", "None", "except", "finally", "for", "try", "while", "with", "break", "continue",
-        "pass", "raise", "return", "yield", "and", "in", "is", "not", "or", "as", "assert", "del", "exec", "print",
+        // keywords
+        "and", "as", "assert", "break", "continue", "del", "except", "exec",
+        "False", "finally", "for", "in", "is", "None", "not", "or", "pass",
+        "print", "python", "raise", "return", "True", "try", "while", "with",
+        "yield",
 
-        // Errors and Exceptions
-        "ArithmeticError", "AssertionError", "AttributeError", "BufferError", "EOFError", "EnvironmentError",
-        "FloatingPointError", "IOError", "ImportError", "IndentationError", "IndexError", "KeyError",
-        "LookupError", "MemoryError", "NameError", "NotImplementedError", "OSError", "OverflowError", "ReferenceError",
-        "RuntimeError", "StandardError", "SyntaxError", "SystemError", "TabError", "TypeError", "UnboundLocalError",
-        "UnicodeEncodeError", "UnicodeDecodeError", "UnicodeTranslateError", "ValueError", "VMSError", "WindowsError",
-        "ZeroDivision", "PendingDeprecationWarning", "DeprecationWarning", "RuntimeWarning", "SyntaxWarning", "UserWarning",
-        "FutureWarning", "ImportWarning", "UnicodeWarning", "BytesWarning", "BaseException",
-        "Exception", "SystemExit", "StopIteration", "NotImplemented", "KeyboardInterrupt","GeneratorExit",
-
-        {"trigger":"else", "contents": "else:\n\t${1:pass}\n$0"},
-        {"trigger":"elif", "contents": "elif ${1:cond}:\n\t${2:pass}\n$0"},
+        // built-in functions
+        {"trigger":"__import__", "contents": "__import__(${1:name}${2:, ${3:globals}${4:, ${5:locals}${6:, ${7:fromlist}${8:, ${9:level}}}}})", "description": "__import__(name[, globals[, locals[, fromlist[, level]]]])"},
         {"trigger":"abs", "contents": "abs(${1:x})"},
         {"trigger":"all", "contents": "all(${1:iterable})"},
         {"trigger":"any", "contents": "any(${1:iterable})"},
         {"trigger":"basestring", "contents": "basestring()"},
         {"trigger":"bin", "contents": "bin(${1:x})"},
         {"trigger":"bool", "contents": "bool(${1:x})"},
+        {"trigger":"bytearray", "contents": "bytearray(${1:source${2:, ${3:encoding}${4:, ${5:errors}}}})", "description": "bytearray([source[, encoding[, errors]]])"},
         {"trigger":"callable", "contents": "callable(${1:object})"},
         {"trigger":"chr", "contents": "chr(${1:i})"},
         {"trigger":"classmethod", "contents": "classmethod(${1:function})"},
         {"trigger":"cmp", "contents": "cmp(${1:x}, ${2:y})"},
+        {"trigger":"compile", "contents": "compile(${1:source}, ${2:filename}, ${3:mode}, ${4:flags, ${5:dont_inherit}})"},
+        {"trigger":"complex", "contents": "complex(${1:real}${2:, ${3:imag}})", "description": "complex([real[, imag]])"},
         {"trigger":"delattr", "contents": "delattr(${1:object}, ${2:name})"},
         {"trigger":"dict", "contents": "dict(**kwarg)"},
         {"trigger":"dir", "contents": "dir(${1:object})"},
         {"trigger":"divmod", "contents": "divmod(${1:a}, ${2:b})"},
+        {"trigger":"elif", "contents": "elif ${1:cond}:\n\t${2:pass}\n$0"},
+        {"trigger":"else", "contents": "else:\n\t${1:pass}\n$0"},
         {"trigger":"enumerate", "contents": "enumerate(${1:sequence}, start=0)"},
+        {"trigger":"eval", "contents": "eval(${1:expression}${2:, ${3:globals}${4:, ${5:locals}}})", "description": "eval(expression[, globals[, locals]])"},
+        {"trigger":"execfile", "contents": "execfile(${1:filename}${2:, ${3:globals}${4:, ${5:locals}}})", "description": "execfile(filename[, globals[, locals]])"},
+        {"trigger":"file", "contents": "file(${1:name}${2:, ${3:mode}${4:, ${5:buffering}}})", "description": "file(name[, mode[, buffering]])"},
         {"trigger":"filter", "contents": "filter(${1:function}, ${2:iterable})"},
         {"trigger":"float", "contents": "float(${1:x})"},
+        {"trigger":"format", "contents": "format(${1:value}${2:, ${3:format_spec}})", "description": "format(value[, format_spec])"},
         {"trigger":"frozenset", "contents": "frozenset(${1:iterable})"},
+        {"trigger":"getattr", "contents": "getattr(${1:object}, ${2: name}${3:, ${4:default}})", "description": "getattr(object, name[, default])"},
         {"trigger":"globals", "contents": "globals()"},
         {"trigger":"hasattr", "contents": "hasattr(${1:object}, ${2:name})"},
         {"trigger":"hash", "contents": "hash(${1:object})"},
@@ -46,95 +49,57 @@
         {"trigger":"int", "contents": "int(${1:x=0})"},
         {"trigger":"isinstance", "contents": "isinstance(${1:object}, ${2:classinfo})"},
         {"trigger":"issubclass", "contents": "issubclass(${1:class}, ${2:classinfo})"},
+        {"trigger":"iter", "contents": "iter(${1:o}${2:, ${3:sentinel}})", "description": "iter(${1:o}[, sentinel])"},
         {"trigger":"len", "contents": "len(${1:s})"},
         {"trigger":"list", "contents": "list(${1:iterable})"},
         {"trigger":"locals", "contents": "locals()"},
         {"trigger":"long", "contents": "long(${1:x})"},
-        {"trigger":"map", "contents": "map(${1:function}, ${2:iterable}, ...)"},
+        {"trigger":"map", "contents": "map(${1:function}, ${2:iterable})"},
+        {"trigger":"max", "contents": "max(${1:iterable}${2:, ${3:key}})", "description": "max(iterable[, key])"},
         {"trigger":"memoryview", "contents": "memoryview(${1:obj})"},
+        {"trigger":"min", "contents": "min(${1:iterable}${2:, ${3:key}})", "description": "min(iterable[, key])"},
+        {"trigger":"next", "contents": "next(${1:iterator}${2:, ${3:default}})", "description": "next(iterator[, default])"},
         {"trigger":"object", "contents": "object()"},
         {"trigger":"oct", "contents": "oct(${1:x})"},
+        {"trigger":"open", "contents": "open(${1:name}${2:, ${3:mode}${4:, ${5:buffering}}})", "description": "open(name[, mode[, buffering]])"},
         {"trigger":"ord", "contents": "ord(${1:c})"},
+        {"trigger":"pow", "contents": "pow(${1:x}, ${2: y${3:, ${4:z}}})", "description": "pow(x, y[, z])"},
         {"trigger":"print", "contents": "print(*objects, sep=' ', end='\\n', file=sys.stdout)"},
+        {"trigger":"property", "contents": "property(${1:fget}${2:, ${3:fset}${4:, ${5:fdel}${6:, ${7:doc}}}})", "description": "property([fget[, fset[, fdel[, doc]]]])"},
         {"trigger":"range", "contents": "range(${1:stop})"},
         {"trigger":"raw_input", "contents": "raw_input(${1:prompt})"},
+        {"trigger":"reduce", "contents": "reduce(${1:function}, ${2:iterable}${3:, ${4:initializer}})", "description": "reduce(function, iterable[, initializer])"},
         {"trigger":"reload", "contents": "reload(${1:module})"},
         {"trigger":"repr", "contents": "repr(${1:object})"},
         {"trigger":"reversed", "contents": "reversed(${1:seq})"},
+        {"trigger":"round", "contents": "round(${1:number}${2:, ${3:ndigits}})", "description": "round(number[, ndigits])"},
         {"trigger":"set", "contents": "set(${1:iterable})"},
         {"trigger":"setattr", "contents": "setattr(${1:object}, ${2:name}, ${3:value})"},
         {"trigger":"slice", "contents": "slice(${1:start}${2:, ${3:stop}}${4:, ${5:step}})"},
+        {"trigger":"sorted", "contents": "sorted(${1:iterable}${2:, ${3:key}${4:, ${5:reverse}${6:, ${7:cmp}}}})", "description": "sorted(iterable[, key[, reverse[, cmp]]])"},
         {"trigger":"staticmethod", "contents": "staticmethod(${1:function})"},
         {"trigger":"str", "contents": "str(${1:object=''})"},
+        {"trigger":"sum", "contents": "sum(${1:iterable}${2:, ${3:start}})", "description": "sum(iterable[, start])"},
+        {"trigger":"super", "contents": "super(${1:type}${2:, ${3:object-or-type}})", "description": "super(type[, object-or-type])"},
         {"trigger":"tuple", "contents": "tuple(${1:iterable})"},
         {"trigger":"type", "contents": "type(${1:object})"},
         {"trigger":"unichr", "contents": "unichr(${1:i})"},
         {"trigger":"unicode", "contents": "unicode(object='')"},
         {"trigger":"vars", "contents": "vars(${1:object})"},
-        {"trigger":"zip", "contents": "zip(${1:iterable})"},
-        {"trigger":"compile", "contents": "compile(${1:source}, ${2:filename}, ${3:mode}, ${4:flags, ${5:dont_inherit}})"},
         {"trigger":"xrange", "contents": "xrange(${1:start}${2:, ${3:stop}}${4:, ${5:step}})"},
+        {"trigger":"zip", "contents": "zip(${1:iterable})"},
 
-        // Variable length args
-        {"trigger":"bytearray", "contents": "bytearray(${1:source${2:, ${3:encoding}${4:, ${5:errors}}}})",
-            "description": "bytearray([source[, encoding[, errors]]])"},
-
-        {"trigger":"complex", "contents": "complex(${1:real}${2:, ${3:imag}})",
-            "description": "complex([real[, imag]])"},
-
-        {"trigger":"eval", "contents": "eval(${1:expression}${2:, ${3:globals}${4:, ${5:locals}}})",
-            "description": "eval(expression[, globals[, locals]])"},
-
-        {"trigger":"execfile", "contents": "execfile(${1:filename}${2:, ${3:globals}${4:, ${5:locals}}})",
-            "description": "execfile(filename[, globals[, locals]])"},
-
-        {"trigger":"file", "contents": "file(${1:name}${2:, ${3:mode}${4:, ${5:buffering}}})",
-            "description": "file(name[, mode[, buffering]])"},
-
-        {"trigger":"format", "contents": "format(${1:value}${2:, ${3:format_spec}})",
-            "description": "format(value[, format_spec])"},
-
-        {"trigger":"getattr", "contents": "getattr(${1:object}, ${2: name}${3:, ${4:default}})",
-            "description": "getattr(object, name[, default])"},
-
-        {"trigger":"iter", "contents": "iter(${1:o}${2:, ${3:sentinel}})",
-            "description": "iter(${1:o}[, sentinel])"},
-
-        {"trigger":"max", "contents": "max(${1:iterable}${2:, ${3:key}})",
-            "description": "max(iterable[, key])"},
-
-        {"trigger":"min", "contents": "min(${1:iterable}${2:, ${3:key}})",
-            "description": "min(iterable[, key])"},
-
-        {"trigger":"next", "contents": "next(${1:iterator}${2:, ${3:default}})",
-            "description": "next(iterator[, default])"},
-
-        {"trigger":"open", "contents": "open(${1:name}${2:, ${3:mode}${4:, ${5:buffering}}})",
-            "description": "open(name[, mode[, buffering]])"},
-
-        {"trigger":"pow", "contents": "pow(${1:x}, ${2: y${3:, ${4:z}}})",
-            "description": "pow(x, y[, z])"},
-
-        {"trigger":"property", "contents": "property(${1:fget}${2:, ${3:fset}${4:, ${5:fdel}${6:, ${7:doc}}}})",
-            "description": "property([fget[, fset[, fdel[, doc]]]])"},
-
-        {"trigger":"reduce", "contents": "reduce(${1:function}, ${2:iterable}${3:, ${4:initializer}})",
-            "description": "reduce(function, iterable[, initializer])"},
-
-        {"trigger":"round", "contents": "round(${1:number}${2:, ${3:ndigits}})",
-            "description": "round(number[, ndigits])"},
-
-        {"trigger":"sorted", "contents": "sorted(${1:iterable}${2:, ${3:key}${4:, ${5:reverse}${6:, ${7:cmp}}}})",
-            "description": "sorted(iterable[, key[, reverse[, cmp]]])"},
-
-        {"trigger":"sum", "contents": "sum(${1:iterable}${2:, ${3:start}})",
-            "description": "sum(iterable[, start])"},
-
-        {"trigger":"super", "contents": "super(${1:type}${2:, ${3:object-or-type}})",
-            "description": "super(type[, object-or-type])"},
-
-        {"trigger":"__import__", "contents": "__import__(${1:name}${2:, ${3:globals}${4:, ${5:locals}${6:, ${7:fromlist}${8:, ${9:level}}}}})",
-            "description": "__import__(name[, globals[, locals[, fromlist[, level]]]])"}
-
+        // Errors and Exceptions
+        "ArithmeticError", "AssertionError", "AttributeError", "BaseException",
+        "BufferError", "BytesWarning", "DeprecationWarning", "EnvironmentError",
+        "EOFError", "Exception", "FloatingPointError", "FutureWarning", "GeneratorExit",
+        "ImportError", "ImportWarning", "IndentationError", "IndexError", "IOError",
+        "KeyboardInterrupt", "KeyError", "LookupError", "MemoryError", "NameError",
+        "NotImplemented", "NotImplementedError", "OSError", "OverflowError",
+        "PendingDeprecationWarning", "ReferenceError", "RuntimeError", "RuntimeWarning",
+        "StandardError", "StopIteration", "SyntaxError", "SyntaxWarning", "SystemError",
+        "SystemExit", "TabError", "TypeError", "UnboundLocalError", "UnicodeDecodeError",
+        "UnicodeEncodeError", "UnicodeTranslateError", "UnicodeWarning", "UserWarning",
+        "ValueError", "VMSError", "WindowsError", "ZeroDivision"
     ]
 }

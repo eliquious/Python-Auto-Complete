@@ -1,0 +1,64 @@
+{
+    "scope": "source.python - meta.statement.except",
+
+    "completions":
+    [
+
+    // IMPORTANT! Completions descriptions are not used due to a bug in Sublime
+    // Text. Characters not in [a-z-A-Z0-9_-] are avoided in triggers too.
+    // See https://github.com/SublimeTextIssues/Core/issues/1061
+
+
+    // Errors and Exceptions
+    {"trigger": "ArithmeticError", "contents": "ArithmeticError(${1:\"${2:error}\"})"},
+    {"trigger": "AssertionError", "contents": "AssertionError(${1:\"${2:error}\"})"},
+    {"trigger": "AttributeError", "contents": "AttributeError(${1:\"${2:error}\"})"},
+    {"trigger": "BaseException", "contents": "BaseException(${1:\"${2:error}\"})"},
+    {"trigger": "BufferError", "contents": "BufferError(${1:\"${2:error}\"})"},
+    {"trigger": "BytesWarning", "contents": "BytesWarning(${1:\"${2:error}\"})"},
+    {"trigger": "DeprecationWarning", "contents": "DeprecationWarning(${1:\"${2:error}\"})"},
+    {"trigger": "EnvironmentError", "contents": "EnvironmentError(${1:\"${2:error}\"})"},
+    {"trigger": "EOFError", "contents": "EOFError(${1:\"${2:error}\"})"},
+    {"trigger": "Exception", "contents": "Exception(${1:\"${2:error}\"})"},
+    {"trigger": "FloatingPointError", "contents": "FloatingPointError(${1:\"${2:error}\"})"},
+    {"trigger": "FutureWarning", "contents": "FutureWarning(${1:\"${2:error}\"})"},
+    {"trigger": "GeneratorExit", "contents": "GeneratorExit(${1:\"${2:error}\"})"},
+    {"trigger": "ImportError", "contents": "ImportError(${1:\"${2:error}\"})"},
+    {"trigger": "ImportWarning", "contents": "ImportWarning(${1:\"${2:error}\"})"},
+    {"trigger": "IndentationError", "contents": "IndentationError(${1:\"${2:error}\"})"},
+    {"trigger": "IndexError", "contents": "IndexError(${1:\"${2:error}\"})"},
+    {"trigger": "IOError", "contents": "IOError(${1:\"${2:error}\"})"},
+    {"trigger": "KeyboardInterrupt", "contents": "KeyboardInterrupt(${1:\"${2:error}\"})"},
+    {"trigger": "KeyError", "contents": "KeyError(${1:\"${2:error}\"})"},
+    {"trigger": "LookupError", "contents": "LookupError(${1:\"${2:error}\"})"},
+    {"trigger": "MemoryError", "contents": "MemoryError(${1:\"${2:error}\"})"},
+    {"trigger": "NameError", "contents": "NameError(${1:\"${2:error}\"})"},
+    {"trigger": "NotImplemented", "contents": "NotImplemented(${1:\"${2:error}\"})"},
+    {"trigger": "NotImplementedError", "contents": "NotImplementedError(${1:\"${2:error}\"})"},
+    {"trigger": "OSError", "contents": "OSError(${1:\"${2:error}\"})"},
+    {"trigger": "OverflowError", "contents": "OverflowError(${1:\"${2:error}\"})"},
+    {"trigger": "PendingDeprecationWarning", "contents": "PendingDeprecationWarning(${1:\"${2:error}\"})"},
+    {"trigger": "ReferenceError", "contents": "ReferenceError(${1:\"${2:error}\"})"},
+    {"trigger": "RuntimeError", "contents": "RuntimeError(${1:\"${2:error}\"})"},
+    {"trigger": "RuntimeWarning", "contents": "RuntimeWarning(${1:\"${2:error}\"})"},
+    {"trigger": "StandardError", "contents": "StandardError(${1:\"${2:error}\"})"},
+    {"trigger": "StopIteration", "contents": "StopIteration(${1:\"${2:error}\"})"},
+    {"trigger": "SyntaxError", "contents": "SyntaxError(${1:\"${2:error}\"})"},
+    {"trigger": "SyntaxWarning", "contents": "SyntaxWarning(${1:\"${2:error}\"})"},
+    {"trigger": "SystemError", "contents": "SystemError(${1:\"${2:error}\"})"},
+    {"trigger": "SystemExit", "contents": "SystemExit(${1:\"${2:error}\"})"},
+    {"trigger": "TabError", "contents": "TabError(${1:\"${2:error}\"})"},
+    {"trigger": "TypeError", "contents": "TypeError(${1:\"${2:error}\"})"},
+    {"trigger": "UnboundLocalError", "contents": "UnboundLocalError(${1:\"${2:error}\"})"},
+    {"trigger": "UnicodeDecodeError", "contents": "UnicodeDecodeError(${1:\"${2:error}\"})"},
+    {"trigger": "UnicodeEncodeError", "contents": "UnicodeEncodeError(${1:\"${2:error}\"})"},
+    {"trigger": "UnicodeTranslateError", "contents": "UnicodeTranslateError(${1:\"${2:error}\"})"},
+    {"trigger": "UnicodeWarning", "contents": "UnicodeWarning(${1:\"${2:error}\"})"},
+    {"trigger": "UserWarning", "contents": "UserWarning(${1:\"${2:error}\"})"},
+    {"trigger": "ValueError", "contents": "ValueError(${1:\"${2:error}\"})"},
+    {"trigger": "VMSError", "contents": "VMSError(${1:\"${2:error}\"})"},
+    {"trigger": "WindowsError", "contents": "WindowsError(${1:\"${2:error}\"})"},
+    {"trigger": "ZeroDivision", "contents": "ZeroDivision(${1:\"${2:error}\"})"},
+
+    ]
+}

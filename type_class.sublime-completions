@@ -1,0 +1,61 @@
+{
+    "scope": "source.python - meta.statement.raise",
+    "completions":
+    [
+
+    // IMPORTANT! Completions descriptions are not used due to a bug in Sublime
+    // Text. Characters not in [a-z-A-Z0-9_-] are avoided in triggers too.
+    // See https://github.com/SublimeTextIssues/Core/issues/1061
+
+    // Errors and Exceptions
+    {"trigger": "ArithmeticError", "contents": "ArithmeticError"},
+    {"trigger": "AssertionError", "contents": "AssertionError"},
+    {"trigger": "AttributeError", "contents": "AttributeError"},
+    {"trigger": "BaseException", "contents": "BaseException"},
+    {"trigger": "BufferError", "contents": "BufferError"},
+    {"trigger": "BytesWarning", "contents": "BytesWarning"},
+    {"trigger": "DeprecationWarning", "contents": "DeprecationWarning"},
+    {"trigger": "EnvironmentError", "contents": "EnvironmentError"},
+    {"trigger": "EOFError", "contents": "EOFError"},
+    {"trigger": "Exception", "contents": "Exception"},
+    {"trigger": "FloatingPointError", "contents": "FloatingPointError"},
+    {"trigger": "FutureWarning", "contents": "FutureWarning"},
+    {"trigger": "GeneratorExit", "contents": "GeneratorExit"},
+    {"trigger": "ImportError", "contents": "ImportError"},
+    {"trigger": "ImportWarning", "contents": "ImportWarning"},
+    {"trigger": "IndentationError", "contents": "IndentationError"},
+    {"trigger": "IndexError", "contents": "IndexError"},
+    {"trigger": "IOError", "contents": "IOError"},
+    {"trigger": "KeyboardInterrupt", "contents": "KeyboardInterrupt"},
+    {"trigger": "KeyError", "contents": "KeyError"},
+    {"trigger": "LookupError", "contents": "LookupError"},
+    {"trigger": "MemoryError", "contents": "MemoryError"},
+    {"trigger": "NameError", "contents": "NameError"},
+    {"trigger": "NotImplementedError", "contents": "NotImplementedError"},
+    {"trigger": "OSError", "contents": "OSError"},
+    {"trigger": "OverflowError", "contents": "OverflowError"},
+    {"trigger": "PendingDeprecationWarning", "contents": "PendingDeprecationWarning"},
+    {"trigger": "ReferenceError", "contents": "ReferenceError"},
+    {"trigger": "RuntimeError", "contents": "RuntimeError"},
+    {"trigger": "RuntimeWarning", "contents": "RuntimeWarning"},
+    {"trigger": "StandardError", "contents": "StandardError"},
+    {"trigger": "StopIteration", "contents": "StopIteration"},
+    {"trigger": "SyntaxError", "contents": "SyntaxError"},
+    {"trigger": "SyntaxWarning", "contents": "SyntaxWarning"},
+    {"trigger": "SystemError", "contents": "SystemError"},
+    {"trigger": "SystemExit", "contents": "SystemExit"},
+    {"trigger": "TabError", "contents": "TabError"},
+    {"trigger": "TypeError", "contents": "TypeError"},
+    {"trigger": "UnboundLocalError", "contents": "UnboundLocalError"},
+    {"trigger": "UnicodeDecodeError", "contents": "UnicodeDecodeError"},
+    {"trigger": "UnicodeEncodeError", "contents": "UnicodeEncodeError"},
+    {"trigger": "UnicodeTranslateError", "contents": "UnicodeTranslateError"},
+    {"trigger": "UnicodeWarning", "contents": "UnicodeWarning"},
+    {"trigger": "UserWarning", "contents": "UserWarning"},
+    {"trigger": "ValueError", "contents": "ValueError"},
+    {"trigger": "VMSError", "contents": "VMSError"},
+    {"trigger": "WindowsError", "contents": "WindowsError"},
+    {"trigger": "ZeroDivision", "contents": "ZeroDivision"},
+
+    ]
+}
